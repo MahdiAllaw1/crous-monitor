@@ -1,0 +1,39 @@
+name: CROUS monitor (Aix)
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: crous-monitor
+  cancel-in-progress: true
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - run: pip install -r requirements.txt
+
+      - name: Run monitor
+        run: python monitor.py
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+
+      - name: Commit updated state
+        run: |
+          git config user.name "crous-monitor-bot"
+          git config user.email "crous-monitor-bot@users.noreply.github.com"
+          git add crous_aix_state.json
+          git diff --cached --quiet || git commit -m "Update CROUS state"
+          git push
