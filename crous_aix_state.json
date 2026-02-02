@@ -1,6 +1,9 @@
 {
   "initialized": true,
-  "seen_ids": [],
+  "seen_ids": [
+    "2238",
+    "2574"
+  ],
   "last_count": null,
-  "last_checked_epoch": 1770033336
+  "last_checked_epoch": 1770038262
 }
