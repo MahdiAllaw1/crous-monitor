@@ -2,7 +2,6 @@ name: CROUS monitor (Grenoble area)
 
 on:
   schedule:
-    # Run at minute 0, 20 and 40 of every hour.
     - cron: "*/5 * * * *"
   workflow_dispatch:
 
