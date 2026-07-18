@@ -2,22 +2,21 @@
   "Grenoble": {
     "initialized": true,
     "seen_ids": [
-      "172",
       "2688"
     ],
     "last_count": null,
-    "last_checked_epoch": 1784359420
+    "last_checked_epoch": 1784365804
   },
   "Saint-Martin-d'Hères": {
     "initialized": true,
     "seen_ids": [],
     "last_count": null,
-    "last_checked_epoch": 1784359422
+    "last_checked_epoch": 1784365805
   },
   "La Tronche": {
     "initialized": true,
     "seen_ids": [],
     "last_count": null,
-    "last_checked_epoch": 1784359423
+    "last_checked_epoch": 1784365807
   }
 }
