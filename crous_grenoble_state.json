@@ -5,18 +5,18 @@
       "2688"
     ],
     "last_count": null,
-    "last_checked_epoch": 1784489560
+    "last_checked_epoch": 1784492766
   },
   "Saint-Martin-d'Hères": {
     "initialized": true,
     "seen_ids": [],
     "last_count": null,
-    "last_checked_epoch": 1784489562
+    "last_checked_epoch": 1784492768
   },
   "La Tronche": {
     "initialized": true,
     "seen_ids": [],
     "last_count": null,
-    "last_checked_epoch": 1784489563
+    "last_checked_epoch": 1784492770
   }
 }
